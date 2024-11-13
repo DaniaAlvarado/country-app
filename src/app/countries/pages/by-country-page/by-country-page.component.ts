@@ -11,7 +11,7 @@ export class ByCountryPageComponent {
   public countries: Country[] = [];
   constructor(private countriesService: CountriesService){}
 
-  searchByCountry(term: string){
+  searchByCountry(term: string):void{
     this.countriesService.searchCountry(term)
     .subscribe( countries =>{
       this.countries = countries;
